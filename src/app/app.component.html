@@ -1,0 +1,13 @@
+<div class="main">
+  <h1>{{title}}</h1>
+  <h2> {{cons.inquireToDo}}</h2>
+
+  <ul *ngFor="let item of items">
+    <li>{{item.description}}</li>
+  </ul>
+
+  <input type="text" id="newItem" #newItem placeholder="add an item" class="lg-text-input"/>
+  <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+</div>
+
+<router-outlet />
